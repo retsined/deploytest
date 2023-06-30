@@ -29,8 +29,8 @@ services:
             - ./:/var/www
             - ./Docker/nginx:/etc/nginx/conf.d
             - ./Docker/nginx/logs:/var/log/nginx
-            - /etc/ssl/certs/dhparam.pem:/etc/ssl/certs/dhparam.pem
-            - /etc/letsencrypt:/etc/letsencrypt
+           # - /etc/ssl/certs/dhparam.pem:/etc/ssl/certs/dhparam.pem
+           # - /etc/letsencrypt:/etc/letsencrypt
         logging:
             options:
                 max-size: "10m"
