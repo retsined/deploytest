@@ -17,8 +17,8 @@ services:
         networks:
             - app-network
 
-    nginx:
-        container_name: nginx
+    webserver:
+        container_name: webserver
         image: nginx:alpine
         restart: unless-stopped
         tty: true
