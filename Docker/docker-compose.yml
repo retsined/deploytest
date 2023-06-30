@@ -1,7 +1,7 @@
 services:
     app:
         build:
-            context: .
+            context: ./Docker
             dockerfile: Dockerfile
         image: howtoforge/app
         container_name: app
