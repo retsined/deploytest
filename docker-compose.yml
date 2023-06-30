@@ -13,7 +13,7 @@ services:
         working_dir: /var/www
         volumes:
             - ./:/var/www
-            - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+            - ./Docker/local.ini:/usr/local/etc/php/conf.d/local.ini
         networks:
             - app-network
 
@@ -27,8 +27,8 @@ services:
             - 443:443
         volumes:
             - ./:/var/www
-            - ./nginx/conf.d:/etc/nginx/conf.d
-            - ./nginx/logs:/var/log/nginx
+            - ./Docker/nginx/conf.d:/etc/nginx/conf.d
+            - ./Docker/nginx/logs:/var/log/nginx
             - /etc/ssl/certs/dhparam.pem:/etc/ssl/certs/dhparam.pem
             - /etc/letsencrypt:/etc/letsencrypt
         logging:
